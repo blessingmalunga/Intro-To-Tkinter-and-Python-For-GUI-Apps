@@ -8,11 +8,15 @@ root.geometry("400x400")
 #bg or background fir formatting background colour 
 # font(font family, size)
 # height=() changing 
+# labels using grid
+myVariable = Label(root,text="Simple Calculator", fg="white", bg="red" , width=15, font=("Helvatica",15))
+#grid works with row= and column and they all  start at position 0
+myVariable.grid(row=1,column=1,columnspan=3)
 
-myVariable = Label(root,text="Hello world", fg="white", bg="red" , width=50, font=("Helvatica",30), height=2)
-#pady(20) moving the label 20 pixels along the y axies
-##padx(20) moving the label 20 pixels along the x axies
-myVariable.pack(pady=10)
+myVariable2 = Label(root,text="Addition")
+#sticky can be used to position within the column N, W,E,S : S is South etc
+myVariable2.grid(row=2,column=1,sticky=E)
 
-
+myVariable3 = Label(root,text="Subtraction")
+myVariable3.grid(row=3,column=1,sticky=W)
 root.mainloop()
